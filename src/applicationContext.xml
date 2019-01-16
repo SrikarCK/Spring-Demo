@@ -8,28 +8,19 @@
 	<bean id="myFortune" class="SpringDemo.HappyFortuneService">
 
 	</bean>
-
-	
     <!-- Define your beans here -->
-    <!--<bean id="myCoach" class="SpringDemo.TrackCoach">-->
-	<!---->
-		<!--<constructor-arg ref="myFortune" />-->
-	<!--</bean>-->
 
-	<bean id="BaseballCoach" class="SpringDemo.BaseballCoach">
-		<!-- set up constructor injection -->
-		<constructor-arg ref="myFortune"/>
-	</bean>
-	<bean id="swimCoach" class="SpringDemo.SwimCoach">
-		<!-- set up constructor injection -->
-		<constructor-arg ref="myFortune"/>
-	</bean>
-	<bean id="trackCoach" class="SpringDemo.TrackCoach">
+	<!-- Constructor Injection Example -->
+	<bean id="baseballCoach" class="SpringDemo.BaseballCoach">
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune"/>
 	</bean>
 
-
+	<!-- Setter Injection Example -->
+	<bean id="cricketCoach" class="SpringDemo.CircketCoach">
+		<!-- Set up setter injection-->
+		<property name="fortuneService" ref="myFortune"/>
+	</bean>
 
 </beans>
 
