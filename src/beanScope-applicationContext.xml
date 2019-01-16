@@ -15,7 +15,8 @@
 
 	<!-- Constructor Injection Example -->
 
-	<!-- Defining the Scope of the bean to prototype -->
+	<!-- Defining the Scope of the bean to prototype
+			by default the scope will be "Singleton"-->
 	<bean id="baseballCoach"
 		  class="SpringDemo.BaseballCoach"
 		  scope="prototype">
