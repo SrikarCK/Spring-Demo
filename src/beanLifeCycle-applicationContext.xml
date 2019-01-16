@@ -14,11 +14,11 @@
 
 	<!-- Constructor Injection Example -->
 
-	<!-- Defining the Scope of the bean to prototype
-			by default the scope will be "Singleton"-->
+	<!-- Defining the bean lifeCycle by using custom start and destroy methods -->
 	<bean id="baseballCoach"
 		  class="SpringDemo.BaseballCoach"
-		  scope="prototype">
+		  init-method="doMystartupStuff"
+		  destroy-method="doMyCleanupStuff">
 		<!-- set up constructor injection -->
 		<constructor-arg ref="myFortune"/>
 	</bean>
